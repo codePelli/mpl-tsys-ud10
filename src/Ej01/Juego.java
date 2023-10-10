@@ -10,7 +10,6 @@ public class Juego {
 		
 		Random rnd = new Random();
 		int numero = rnd.nextInt(500) + 1;
-		System.out.println(numero);
 		int intento = 0;
 		
 		while (true) {
