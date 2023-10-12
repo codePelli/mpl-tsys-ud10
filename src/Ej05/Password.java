@@ -36,7 +36,26 @@ public class Password {
 	
 	public boolean esFuerte() {
 		
-		return false;
+		int mayus = 0;
+		int minus = 0;
+		int num = 0;
+
+		for (char x : password.toCharArray()) {
+			
+			if (Character.isUpperCase(x)) {
+				mayus++;
+				
+			} else if (Character.isLowerCase(x)) {
+				minus++;
+				
+			} else if (Character.isDigit(x)) {
+				num++;
+			
+			}
+		}
+		
+				
+		return mayus >= 2 && minus > 1 && num >= 5;
 	}
 	
 	public String generarPassword() {
